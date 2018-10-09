@@ -50,8 +50,8 @@ def main():
 
     run_test_problem1a()
     run_test_problem1b()
-    # run_test_problem1c()
-    # run_test_problem1d()
+    run_test_problem1c()
+    run_test_problem1d()
 
 
 def run_test_problem1a():
@@ -598,10 +598,14 @@ def problem1c(strings):
       :rtype: bool
     """
     # -------------------------------------------------------------------------
-    # TODO: 4. Implement and test this function.
+    # Done: 4. Implement and test this function.
     #          Tests have been written for you (above).
     # See  IMPORTANT  note before the DEF line of this function.
     # -------------------------------------------------------------------------
+
+    Ashley = problem1b(strings)
+    Matherly = is_prime(Ashley)
+    return Matherly
 
 
 def run_test_problem1d():
@@ -788,7 +792,13 @@ def problem1d(strings):
     # TODO: 5. Implement and test this function.
     #          Tests have been written for you (above).
     # -------------------------------------------------------------------------
-
+    a = -1
+    for k in range(len(strings)):
+        Ashley = len(strings[k])
+        Matherly = is_prime(Ashley)
+        if Matherly == True:
+            return strings[k]
+    return a
 
 ###############################################################################
 # Our tests use the following to print error messages in red.
