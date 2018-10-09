@@ -5,8 +5,8 @@ This module contains:
   -- Methods you must implement for the Cloud object
   
 Authors: David Mutchler, Dave Fisher, Matt Boutell, their colleagues,
-         and PUT_YOUR_NAME_HERE.  October 2018.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         and Lucus Bendzsa.  October 2018.
+"""  # DOne: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 import time
 from numbers import Number
@@ -25,9 +25,9 @@ def main():
     print('Un-comment the calls in MAIN one by one')
     print(' to run the testing code as you complete the TODOs.')
 
-    # run_test_init()
-    # run_test_rain()
-    # run_test_get_total_rain_amount()
+    run_test_init()
+    run_test_rain()
+    run_test_get_total_rain_amount()
     # run_test_merge_cloud()
 
 
@@ -75,8 +75,16 @@ class Cloud(object):
           :type capacity: int | float
           :type water: int | float
         """
+
+        if water >= capacity:
+            self.capacity = capacity
+            self.water = capacity
+        else:
+            self.capacity = capacity
+            self.water = water
+        self.water1 = self.water
         # ---------------------------------------------------------------------
-        # TODO: 2. Implement and test this method.
+        # Done: 2. Implement and test this method.
         # ---------------------------------------------------------------------
 
     def rain(self, rain_amount):
@@ -121,8 +129,18 @@ class Cloud(object):
           :type  rain_amount: int | float
           :rtype: int | float
         """
+
+        if rain_amount >= self.water:
+            rain_amount = self.water
+            self.water = 0
+            return rain_amount
+        if rain_amount < self.water:
+            self.water = self.water - rain_amount
+            return rain_amount
+
+
         # ---------------------------------------------------------------------
-        # TODO: 3. Implement and test this method.
+        # DOne: 3. Implement and test this method.
         # ---------------------------------------------------------------------
 
 
@@ -156,9 +174,13 @@ class Cloud(object):
           :rtype: int | float
         """
         # ---------------------------------------------------------------------
-        # TODO: 4. Implement and test this method.
+        # Done: 4. Implement and test this method.
         # ---------------------------------------------------------------------
+        # This is the Dory Problem, help Dory remember her moves
 
+        total_rain = self.water1 - self.water
+
+        return total_rain
 
     def merge_cloud(self, another_cloud):
         """

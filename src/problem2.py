@@ -196,7 +196,7 @@ def problem2a(triangle):
       :rtype: Triangle
     """
     # -------------------------------------------------------------------------
-    # TODO: 2. Implement and test this function.
+    # Done: 2. Implement and test this function.
     #          Tests have been written for you (above).
     # -------------------------------------------------------------------------
 
@@ -361,7 +361,7 @@ def problem2b(triangles):
       :rtype: int | float
     """
     # -------------------------------------------------------------------------
-    # TODO: 3. Implement and test this function.
+    # DOne: 3. Implement and test this function.
     #          Tests have been written for you (above).
     # IMPORTANT: See the HINT just before the DEF of this function.
     # -------------------------------------------------------------------------
