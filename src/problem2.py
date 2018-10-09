@@ -368,7 +368,7 @@ def problem2b(triangles):
 
     total = 0
     for k in range(len(triangles)):
-        total = triangles[k].get_area()
+        total = triangles[k].get_area() + total
     return total
 
 ###############################################################################
